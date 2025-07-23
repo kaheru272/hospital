@@ -60,10 +60,7 @@ export default function DoctorDashboard() {
                     <h4 className="text-lg font-semibold text-teal-800 mb-2">Medical Records</h4>
                     <p className="text-gray-600">View and update patient medical records.</p>
                 </div>
-                <div className="rounded-xl bg-teal-50 p-6 shadow hover:shadow-lg transition">
-                    <h4 className="text-lg font-semibold text-teal-800 mb-2">Prescriptions</h4>
-                    <p className="text-gray-600">Manage and issue prescriptions for patients.</p>
-                </div>
+               
             </div>
         </DashboardLayout>
     );

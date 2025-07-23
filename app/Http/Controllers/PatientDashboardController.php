@@ -9,6 +9,9 @@ class PatientDashboardController extends Controller
 {
     public function index(): Response
     {
+        if (auth()->user()->role !== 'Patient') {
+            abort(403, 'Unauthorized');
+        }
         return Inertia::render('Dashboard/PatientDashboard');
     }
 }

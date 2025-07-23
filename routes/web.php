@@ -23,29 +23,21 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
 Route::middleware(['auth'])->group(function () {
-    Route::get('/doctor-dashboard', function () {
-        return Inertia::render('Dashboard/DoctorDashboard');
-    })->name('doctor.dashboard');
+    Route::get('/doctor-dashboard', [DoctorDashboardController::class, 'index'])->name('doctor.dashboard');
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/patient-dashboard', function () {
-        return Inertia::render('Dashboard/PatientDashboard');
-    })->name('patient.dashboard');
+    Route::get('/patient-dashboard', [PatientDashboardController::class, 'index'])->name('patient.dashboard');
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/nurse-dashboard', function () {
-        return Inertia::render('Dashboard/NurseDashboard');
-    })->name('nurse.dashboard');
+    Route::get('/nurse-dashboard', [NurseDashboardController::class, 'index'])->name('nurse.dashboard');
 });
-Route::middleware(['auth'])->get('/admin-dashboard', function () {
-    $user = \Illuminate\Support\Facades\Auth::user();
-    if ($user && $user->role === 'Admin') {
-        return Inertia::render('Dashboard/AdminDashboard');
-    }
-    abort(403);
-})->name('admin.dashboard');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin-dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+});
 
 require __DIR__.'/auth.php';

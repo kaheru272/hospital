@@ -9,6 +9,9 @@ class DoctorDashboardController extends Controller
 {
     public function index(): Response
     {
+        if (auth()->user()->role !== 'Doctor') {
+            abort(403, 'Unauthorized');
+        }
         return Inertia::render('Dashboard/DoctorDashboard');
     }
 }
