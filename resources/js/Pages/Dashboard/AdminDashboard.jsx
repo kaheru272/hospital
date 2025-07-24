@@ -2,6 +2,9 @@ import DashboardLayout from '@/Layouts/DashboardLayout';
 import { Head, usePage } from '@inertiajs/react';
 
 const navItems = [
+    { label: 'Dashboard', href: '/admin-dashboard', icon: (
+        <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0h6" /></svg>
+    ) },
     { label: 'Patients', href: '/admin/patients', icon: (
         <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
     ) },
@@ -20,14 +23,12 @@ const navItems = [
     { label: 'Laboratory', href: '/admin/laboratory', icon: (
         <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18V5a2 2 0 012-2h8a2 2 0 012 2v13M6 18a2 2 0 002 2h8a2 2 0 002-2M6 18h12" /></svg>
     ) },
-    
     { label: 'Billing & Invoicing', href: '/admin/billing', icon: (
         <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 7v7m0 0h4m-4 0H8" /></svg>
     ) },
     { label: 'Inventory', href: '/admin/inventory', icon: (
         <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M20 13V7a2 2 0 00-2-2H6a2 2 0 00-2 2v6m16 0v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6m16 0H4" /></svg>
     ) },
-    
     { label: 'Reports', href: '/admin/reports', icon: (
         <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 3v18h18M9 17v-6a2 2 0 012-2h2a2 2 0 012 2v6" /></svg>
     ) },
@@ -55,4 +56,4 @@ export default function AdminDashboard() {
             </div>
         </DashboardLayout>
     );
-} 
+}

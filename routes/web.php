@@ -38,6 +38,12 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin-dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+
+    // Admin Patients Module
+    Route::prefix('admin')->name('admin.')->group(function () {
+        Route::resource('patients', App\Http\Controllers\AdminPatientController::class)
+            ->only(['index', 'show', 'edit', 'update', 'destroy']);
+    });
 });
 
 require __DIR__.'/auth.php';

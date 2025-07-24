@@ -44,9 +44,7 @@ export default function DoctorDashboard() {
     return (
         <DashboardLayout navItems={navItems}>
             <Head title="Doctor Dashboard" />
-            <div className="mb-8">
-                <h2 className="text-xl font-semibold leading-tight text-gray-800">Doctor Dashboard</h2>
-            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="rounded-xl bg-teal-50 p-6 shadow hover:shadow-lg transition">
                     <h4 className="text-lg font-semibold text-teal-800 mb-2">Appointments</h4>
