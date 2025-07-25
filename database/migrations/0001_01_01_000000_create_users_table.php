@@ -17,18 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('role')->default('Patient'); // Added role column
-            $table->string('phone')->nullable();
-            $table->date('date_of_birth')->nullable();
-            $table->string('gender')->nullable();
-            $table->string('address')->nullable();
-            $table->string('emergency_contact_name')->nullable();
-            $table->string('emergency_contact_phone')->nullable();
-            $table->string('emergency_contact_relationship')->nullable();
-            $table->string('insurance_provider')->nullable();
-            $table->string('insurance_policy_number')->nullable();
-            $table->text('medical_history')->nullable();
-            $table->string('national_id')->unique()->nullable();
+            $table->string('role')->default('Patient');
+            // Removed extra patient-specific fields. Only default fields and 'role' remain.
             $table->rememberToken();
             $table->timestamps();
         });

@@ -24,15 +24,11 @@ export default function Login({ status, canResetPassword }) {
     return (
         <GuestLayout>
             <Head title="Log in" />
+           
 
-            {status && (
-                <div className="mb-4 text-sm font-medium text-green-600">
-                    {status}
-                </div>
-            )}
-
-            <form onSubmit={submit} className="space-y-6">
+            <form onSubmit={submit} className="w-full max-w-md mx-auto space-y-5 bg-white p-6 rounded-xl shadow-md">
                 <div>
+                     {status && <div className="mb-4 text-sm text-green-600">{status}</div>}
                     <InputLabel htmlFor="email" value="Email" className="text-teal-700 font-medium" />
                     <TextInput
                         id="email"
@@ -86,8 +82,7 @@ export default function Login({ status, canResetPassword }) {
                     <span className="text-sm text-gray-600">Don't have an account? </span>
                     <Link
                         href={route('register')}
-                        className="text-sm text-teal-600 hover:text-teal-800 font-medium"
-                    >
+                        className="text-sm text-teal-600 hover:text-teal-800 font-medium">
                         Register
                     </Link>
                 </div>

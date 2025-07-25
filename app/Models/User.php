@@ -21,18 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role', // Added role to fillable
-        'phone',
-        'date_of_birth',
-        'gender',
-        'address',
-        'emergency_contact_name',
-        'emergency_contact_phone',
-        'emergency_contact_relationship',
-        'insurance_provider',
-        'insurance_policy_number',
-        'medical_history',
-        'national_id',
+        
     ];
 
     /**

@@ -27,7 +27,7 @@ export default function ForgotPassword({ status }) {
                     {status}
                 </div>
             )}
-            <form onSubmit={submit} className="space-y-6">
+              <form onSubmit={submit} className="w-full max-w-md mx-auto space-y-5 bg-white p-6 rounded-xl shadow-md">
                 <TextInput
                     id="email"
                     type="email"
